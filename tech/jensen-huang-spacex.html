@@ -25,12 +25,11 @@ figure{margin:16px -18px 0}figure img{width:100%;display:block}
 figcaption{font:400 12px/1.45 Inter;color:#6b6b6b;margin:7px 18px 0}
 .body p{font:400 18px/1.6 'Source Serif 4',serif;margin-top:16px}
 .body a{color:#141414;text-decoration:underline;text-decoration-color:#b3261e;text-underline-offset:3px}
-#gotcha{position:fixed;inset:0;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;opacity:0;pointer-events:none;transition:opacity .25s;z-index:10;padding:24px;text-align:center}
-#gotcha.on{opacity:1;pointer-events:auto}
-#gotcha img{width:min(92vw,620px);border-radius:6px}
-#gotcha p{color:#fff;font:900 clamp(30px,9vw,56px)/1 Inter;letter-spacing:.02em}
-#gotcha .sig{color:#fff;font:700 clamp(18px,5vw,26px)/1.2 Inter;letter-spacing:.04em;margin-top:-6px}
-#gotcha small{color:#9a9a9a;font:400 14px/1.4 Inter}
+#gotcha{position:fixed;inset:0;background:#000;display:none;flex-direction:column;justify-content:center;z-index:10}
+#gotcha.on{display:flex}
+#gotcha img{width:100%;max-width:720px;margin:0 auto;display:block}
+#gotcha .sig{color:#e8e8e8;font:400 17px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding:16px 20px 0;max-width:720px;margin:0 auto;width:100%}
+#gotcha small{display:block;color:#777;font:400 12px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding:6px 20px 0;max-width:720px;margin:0 auto;width:100%}
 </style></head><body>
 <div class="nav"><div class="burger"><i></i><i></i><i></i></div><div class="mast">The Meridian<span>.</span></div><div class="sub">Subscribe</div></div>
 <main>
@@ -45,7 +44,7 @@ figcaption{font:400 12px/1.45 Inter;color:#6b6b6b;margin:7px 18px 0}
 <p id="trip">Musk did not say what title Huang would hold, or when he would start. A SpaceX spokesperson declined to comment further.</p>
 </div>
 </main>
-<div id="gotcha"><img src="gotcha.gif" alt=""><p>GOTCHA.</p><div class="sig">Isosceles got you ▲</div><small>Not real. Jensen isn't going to SpaceX.</small></div>
+<div id="gotcha"><img src="gotcha.gif" alt=""><div class="sig">isosceles got you</div><small>not real. jensen isn't going to spacex</small></div>
 <script>
 // The joke: read a few lines, then McConaughey. Fires on scroll into the last paragraph or after 7 s.
 const show = () => document.getElementById('gotcha').classList.add('on');
